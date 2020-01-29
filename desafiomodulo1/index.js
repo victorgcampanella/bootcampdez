@@ -16,6 +16,24 @@ const projects = [{
 },
 ];
 
+server.use((request, response, next) => {
+  console.count('Numero de requisicoes')
+
+  return next()
+})
+
+function ckeckProjectExists(request, response, next){
+  const {id} = request.params
+
+  const findProject = projects.find(params => params.id == id)
+
+  if(!findProject){
+    return response.status(400).json({error: 'Project is not defined'});
+  }
+
+  return next()
+}
+
 server.post('/projects', (request, response) => {
   const { id, title, tasks } = request.body
 
@@ -34,7 +52,7 @@ server.get('/projects', (request, response) => {
   return response.json(projects)
 })
 
-server.put('/projects/:id', (request, response) => {
+server.put('/projects/:id', ckeckProjectExists, (request, response) => {
   const { id } = request.params
   const { title, tasks } = request.body
 
@@ -46,7 +64,7 @@ server.put('/projects/:id', (request, response) => {
   return response.json(projects)
 })
 
-server.delete('/projects/:id', (request, response) => {
+server.delete('/projects/:id', ckeckProjectExists, (request, response) => {
   const {id} = request.params
 
   const projectIndex = projects.findIndex(params => params.id == id)
@@ -56,7 +74,7 @@ server.delete('/projects/:id', (request, response) => {
   return response.json(projects)
 })
 
-server.post('/projects/:id/tasks', (request, response) => {
+server.post('/projects/:id/tasks', ckeckProjectExists, (request, response) => {
   const {id} = request.params
   const {title} = request.body
 
