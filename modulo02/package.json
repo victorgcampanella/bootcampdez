@@ -17,6 +17,7 @@
     "sucrase": "^3.12.1"
   },
   "scripts": {
+    "clean" : "eslint --fix src --ext .js",
     "dev": "nodemon src/server.js",
     "dev:debug": "nodemon --inspect src/server.js"
   }
