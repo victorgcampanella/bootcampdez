@@ -1,9 +1,7 @@
-import {Router} from 'express'
+import { Router } from 'express';
 
-const routes = new Router()
+const routes = new Router();
 
-routes.get('/', (request, response) => {
-  return response.json({message: 'Hello Omni'})
-})
+routes.get('/', (request, response) => response.json({ message: 'Hello Omni' }));
 
-export default routes
+export default routes;
