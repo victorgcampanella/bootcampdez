@@ -7,7 +7,9 @@ class UserController {
     });
 
     if (userExists) {
-      return response.status(400).json({ error: 'User already exists' });
+      return response.status(400).json({
+        error: 'User already exists',
+      });
     }
 
     const { id, name, email, provider } = await User.create(request.body);
