@@ -47,6 +47,12 @@ class AppointmentController {
 
     const { provider_id, date } = request.body;
 
+    if (provider_id === request.userId) {
+      return response
+        .status(401)
+        .json({ error: 'You can not create appointments for you' });
+    }
+
     /*
     Check if provider_id is a provider
     */
