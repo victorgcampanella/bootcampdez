@@ -7,3 +7,24 @@ body {
 body img {
   border-radius: 20%;
 }
+
+body input {
+  display: flex;
+  background-color: rgb(240, 230, 240);
+  width: 120px;
+}
+
+body li {
+  margin-right: 5px;
+}
+
+body button {
+  font:bold 12px Tahoma, sans-serif;
+  padding: 5px;
+  color:#ffffff;
+  background:#c962d9;
+  border:2px solid #a82ba8;
+  border-radius:10px 10px 10px 10px;
+  cursor:pointer; 
+  width: 120px;
+}
