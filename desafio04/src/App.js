@@ -1,7 +1,11 @@
 import React from 'react'
 
+import './App.css'
+
+import FacebookPage from './components/FacebookPage'
+
 function App(){
-  return <h1>Facebook</h1>
+  return <FacebookPage />
 }
 
 export default App
