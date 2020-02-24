@@ -1,11 +1,18 @@
 import React, {Component} from 'react'
 
+import profile from '../assets/profile.png'
+
 class Header extends Component{
   render(){
     return (
       <header>
-        <h1>Facebook</h1>
-        <h1>Meu Perfil</h1>
+        <nav>
+          <img id='imgpage'src="https://i.imgur.com/KDIDiSE.png"/>
+          <div>
+            <h1>Meu perfil</h1>
+            <img id="profile" src={profile}/>
+          </div>
+        </nav>
       </header>
     )
   }
