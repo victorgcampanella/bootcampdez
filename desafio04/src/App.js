@@ -2,10 +2,10 @@ import React from 'react'
 
 import './App.css'
 
-import FacebookPage from './components/FacebookPage'
+import Header from './components/Header'
 
 function App(){
-  return <FacebookPage />
+  return <Header />
 }
 
 export default App
