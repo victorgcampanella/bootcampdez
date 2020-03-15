@@ -1,6 +1,7 @@
-/* eslint-disable no-undef */
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
+
+import './config/ReactotronConfig';
 
 const styles = StyleSheet.create({
   view: {
@@ -16,14 +17,22 @@ const styles = StyleSheet.create({
     backgroundColor: '#5179c1',
     borderRadius: 4,
     padding: 20,
-    maxWidth: 300,
+    margin: 50,
+    maxWidth: 350,
+  },
+
+  button: {
+    borderRadius: 50,
   },
 });
+
+console.tron.log('Hello React');
 
 export default function App() {
   return (
     <View style={styles.view}>
       <Text style={styles.welcome}>Bem vindo ao React Native</Text>
+      <Button style={styles.button} title="Processar" />
     </View>
   );
 }
