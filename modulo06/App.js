@@ -8,9 +8,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+
   welcome: {
     fontSize: 32,
+    fontStyle: 'italic',
     textAlign: 'center',
+    backgroundColor: '#5179c1',
+    borderRadius: 4,
+    padding: 20,
+    maxWidth: 300,
   },
 });
 
