@@ -26,13 +26,13 @@ const styles = StyleSheet.create({
   },
 });
 
-console.tron.log('Hello React');
+console.tron.log('Hello Mitei');
 
 export default function App() {
   return (
     <View style={styles.view}>
       <Text style={styles.welcome}>Bem vindo ao React Native</Text>
-      <Button style={styles.button} title="Processar" />
+      <Button style={styles.button} title="Enviar" />
     </View>
   );
 }
