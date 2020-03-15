@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
   },
 });
 
-console.tron.log('Hello Agora');
+console.tron.log('Hello Deu certo?');
 
 export default function App() {
   return (
