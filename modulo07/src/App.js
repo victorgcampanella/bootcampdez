@@ -1,11 +1,7 @@
 import React from 'react';
 
 function App() {
-  return (
-    <div className="App">
-      <h1>Hello Redux</h1>
-    </div>
-  );
+  return <h1>Hello Redux</h1>;
 }
 
 export default App;
